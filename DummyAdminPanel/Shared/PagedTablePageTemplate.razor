@@ -1,0 +1,24 @@
+﻿@typeparam TData
+
+@if (_isFailedToFetch)
+{
+    <p>Failed to fetch data. Try again later.</p>
+    <a href="#" @onclick="ShowDataForCurrentPage">Try Again</a>
+}
+else if (_pagedData == null)
+{
+    <p>Loading ...</p>
+}
+else
+{
+    <TableView Data="_pagedData.Data" Context="entry">
+        <Header>
+            @TableHeader
+        </Header>
+        <RowTemplate>
+            @TableRowTemplate(entry)
+        </RowTemplate>
+    </TableView>
+
+    <Pagination CurrentPage="CurrentPage" TotalPages="_pagedData.TotalPages" UrlGenerator="PageUrlGenerator"></Pagination>
+}

@@ -1,0 +1,46 @@
+﻿@page
+@model DummyAdminPanel.Pages.LoginModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Login</title>
+    <link href="~/css/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link href="~/css/Login.css" rel="stylesheet"/>
+</head>
+
+<body class="text-center">
+
+<main class="form-signin">
+    <form method="post">
+        <img class="mb-4" src="https://tawasal.ae/images/new/logo.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        
+        <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
+
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" asp-for="Email" value="test@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" asp-for="Password" value="test">
+            <label for="floatingPassword">Password</label>
+        </div>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" asp-for="RememberMe"> Remember me
+            </label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">© 2022</p>
+    </form>
+</main>
+</body>
+</html>

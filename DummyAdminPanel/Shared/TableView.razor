@@ -1,0 +1,17 @@
+﻿@typeparam TData
+
+<table class="table">
+    <thead>
+    <tr>
+        @Header
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var rowData in Data)
+    {
+        <tr>
+            @RowTemplate(rowData)
+        </tr>
+    }
+    </tbody>
+</table>

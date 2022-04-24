@@ -1,0 +1,40 @@
+﻿@page "/posts"
+@using System.Globalization
+
+@if (UserId == null)
+{
+    <p>
+        Please select a user whose posts you want to view.
+        <a href="/">Select users</a>
+    </p>
+}
+else
+{
+    <PageTitle>Posts</PageTitle>
+
+    <h1>Posts</h1>
+
+    <a href="/users">Back to users</a>
+    <hr/>
+
+    <PagedTablePageTemplate TData="PostPreview" TryLoadDataForPage="TryLoadPostsPaged" CurrentPage="CurrentPage" PageUrlGenerator="UrlToPage">
+        <TableHeader>
+            <th scope="col">ID</th>
+            <th scope="col">Image</th>
+            <th scope="col">Likes</th>
+            <th scope="col">Tags</th>
+            <th scope="col">Text (preview)</th>
+            <th scope="col">Publish Date (UTC)</th>
+        </TableHeader>
+        <TableRowTemplate Context="post">
+            <th scope="row">@post.Id</th>
+            <td>
+                <img src="@post.Image" height="50" width="50"/>
+            </td>
+            <td>@post.Likes</td>
+            <td>@string.Join(", ", post.Tags)</td>
+            <td>@post.Preview</td>
+            <td>@post.PublishDateUtc.ToString("f", CultureInfo.InvariantCulture)</td>
+        </TableRowTemplate>
+    </PagedTablePageTemplate>
+}

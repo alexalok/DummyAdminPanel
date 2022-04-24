@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyAdminPanel", "DummyAdminPanel\DummyAdminPanel.csproj", "{3A386FC2-CB84-409B-895B-8CBD7DCCC039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyAdminPanel.Tests", "DummyAdminPanel.Tests\DummyAdminPanel.Tests.csproj", "{C1E21D93-98C7-415D-82E7-3F2EA7143383}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A386FC2-CB84-409B-895B-8CBD7DCCC039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A386FC2-CB84-409B-895B-8CBD7DCCC039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A386FC2-CB84-409B-895B-8CBD7DCCC039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A386FC2-CB84-409B-895B-8CBD7DCCC039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1E21D93-98C7-415D-82E7-3F2EA7143383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E21D93-98C7-415D-82E7-3F2EA7143383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E21D93-98C7-415D-82E7-3F2EA7143383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E21D93-98C7-415D-82E7-3F2EA7143383}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A2B0B12-0D26-45D2-962C-00272BE95E3C}
+	EndGlobalSection
+EndGlobal
